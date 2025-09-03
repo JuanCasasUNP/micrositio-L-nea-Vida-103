@@ -1,0 +1,196 @@
+:root {
+  --azul: #0AB5F3;
+  --verde: #63C635;
+  --rojo: #F00;
+}
+
+
+
+.header {
+  text-align: center;
+  margin-bottom: 50px;
+  padding: 20px;
+}
+
+.header h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  background: linear-gradient(to right, var(--azul), var(--verde));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.header p {
+  font-size: 1.3rem;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+  opacity: 0.85;
+  color: #e0f0ff;
+}
+
+.emergency-button {
+  position: relative;
+  width: 100%;
+  height: 199px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s ease;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.emergency-button.full-width {
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.emergency-button:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+}
+
+.emergency-button .background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+  opacity: 0.7;
+}
+
+.emergency-button .content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  color: white;
+  padding: 20px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.emergency-button .icon {
+  width: 80px;
+  height: 80px;
+  transition: all 0.4s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.emergency-button:hover .icon {
+  transform: scale(1.15) rotate(-5deg);
+}
+
+.emergency-button h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+
+.overlay.azul {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.00) 0%, rgba(51, 102, 204, 0.38) 54.81%);
+  background-image: url('../images/Rectangle\ 31.png');
+  border: 5px solid #0AB5F3;
+}
+
+.overlay.verde {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.00) 0%, rgba(99, 198, 53, 0.38) 54.81%);
+  background-image: url('../images/Rectangle\ 32.png');
+  border: 5px solid #63C635;
+}
+
+.overlay.rojo {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.00) 0%, rgba(255, 0, 0, 0.38) 54.81%);
+  background-image: url('../images/Rectangle\ 30.png');
+  border: 5px solid #F00;
+}
+.footer {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.9rem;
+}
+
+/* Animación de fondo */
+.bg-animation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+.pulse {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(10,181,243,0.5) 0%, rgba(10,181,243,0) 70%);
+  animation: pulse-animation 4s infinite;
+}
+
+@keyframes pulse-animation {
+  0% { transform: scale(0.1); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 2.2rem;
+  }
+  
+  .emergency-button {
+    height: 180px;
+  }
+  
+  .emergency-button h3 {
+    font-size: 1.5rem;
+  }
+  
+  .emergency-button .icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+  }
+  
+  .content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  color: white;
+  padding: 20px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+}

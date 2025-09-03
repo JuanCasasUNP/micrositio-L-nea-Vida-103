@@ -1,0 +1,217 @@
+:root {
+  --azul-oscuro: #0c1c3d;
+  --azul-claro: #63C635;
+  --verde: #63C635;
+  --rojo: #F00;
+  --blanco: #ffffff;
+  --gris-oscuro: #2c3e50;
+  --dorado: #FFD700;
+}
+
+.main-container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.custom-container {
+  border-radius: 25px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+  min-height: 500px;
+}
+
+.container-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    linear-gradient(135deg, rgba(10, 181, 243, 0.1) 0%, rgba(99, 198, 53, 0.1) 100%),
+    url('../images/Rectangle\ 48.png'); /* Ajusta esta ruta según sea necesario */
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.7);
+  z-index: 1;
+}
+
+.overlay-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle, transparent 20%, rgba(0,0,0,0.4) 100%),
+    repeating-linear-gradient(45deg, rgba(0,0,0,0.1) 0px, rgba(0,0,0,0.1) 1px, transparent 1px, transparent 11px);
+  opacity: 0.7;
+  z-index: 2;
+}
+
+.content-wrapper {
+  position: relative;
+  z-index: 3;
+  padding: 50px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.text-container {
+  flex: 1;
+  min-width: 300px;
+  padding: 30px;
+  border-radius: 20px;
+  backdrop-filter: blur(1px);
+  border: 2px solid rgba(10, 181, 243, 0.3);
+  margin-right: 30px;
+}
+
+.image-container2 {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title-section {
+  margin-bottom: 30px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.title-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.title-section h2 span {
+  background: var(--blanco);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.title-section p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  opacity: 0.9;
+  color: #e0f0ff;
+  max-width: 600px;
+}
+
+.stats-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.stat-card {
+  flex: 1;
+  min-width: 200px;
+  border-radius: 15px;
+  padding: 25px;
+  border: 2px solid rgba(10, 181, 243, 0.3);
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.stat-card:hover {
+  transform: translateY(-10px);
+  background: rgba(10, 181, 243, 0.25);
+  box-shadow: 0 10px 25px rgba(10, 181, 243, 0.2);
+}
+
+.stat-number {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  background: linear-gradient(to bottom, var(--blanco), var(--azul-claro));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.stat-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--blanco);
+  margin-bottom: 10px;
+}
+
+.stat-description {
+  font-size: 1rem;
+  opacity: 0.85;
+  color: #e0f0ff;
+}
+
+.featured-image {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  transition: all 0.4s ease;
+  border: 5px solid rgba(10, 181, 243, 0.3);
+}
+
+.featured-image:hover {
+  transform: translateY(-10px) rotate(2deg);
+  box-shadow: 0 20px 40px rgba(10, 181, 243, 0.3);
+}
+
+.cap-description {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+}
+
+.cap-description p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin: 0;
+  font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .content-wrapper {
+    flex-direction: column;
+    padding: 30px;
+  }
+  
+  .text-container {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+  
+  .title-section h2 {
+    font-size: 2rem;
+  }
+  
+  .stat-number {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .content-wrapper {
+    padding: 20px;
+  }
+  
+  .text-container, .image-container2 {
+    padding: 20px;
+  }
+  
+  .title-section h2 {
+    font-size: 1.8rem;
+  }
+  
+  .stat-card {
+    min-width: 100%;
+  }
+}

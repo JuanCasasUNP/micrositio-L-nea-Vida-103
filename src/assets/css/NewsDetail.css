@@ -1,0 +1,100 @@
+/* components/assets/css/NewsDetail.css */
+.news-detail-page {
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  padding-bottom: 2rem;
+}
+
+.news-container {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  margin: 2rem auto;
+}
+
+.news-title {
+  color: #2c3e50;
+  border-bottom: 3px solid #3498db;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.news-img {
+  border-radius: 8px;
+  margin: 1.5rem 0;
+  width: 100%;
+  height: auto;
+}
+
+.author-img {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #e9ecef;
+}
+
+.social-icon {
+  font-size: 1.5rem;
+  margin-right: 0.8rem;
+  color: #6c757d;
+  transition: color 0.3s;
+}
+
+.social-icon:hover {
+  color: #3498db;
+}
+
+.content-text {
+  text-align: justify;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+.content-text h3 {
+  color: #2c3e50;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.content-text p {
+  margin-bottom: 1.5rem;
+}
+
+.content-text ul {
+  margin-bottom: 1.5rem;
+  padding-left: 2rem;
+}
+
+.content-text li {
+  margin-bottom: 0.5rem;
+}
+
+.lv-social {
+  background-color: #f1f8ff;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+.news-date {
+  color: #6c757d;
+  font-style: italic;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .news-container {
+    padding: 1.5rem;
+    margin: 1rem auto;
+  }
+  
+  .news-title {
+    font-size: 1.8rem;
+  }
+  
+  .content-text {
+    font-size: 1rem;
+  }
+}
